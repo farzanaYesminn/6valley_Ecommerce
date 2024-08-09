@@ -1,27 +1,41 @@
-const dropdownButton = document.getElementById('dropdownButton');
-const dropdown = document.getElementById('dropdown');
+const dropdownRightNavButton = document.getElementById('dropdownRightNavButton');
+const dropdownRightNav = document.getElementById('dropdownRightNav');
 
-// Toggle dropdown on button click
-dropdownButton.addEventListener('click', function(event) {
-    event.stopPropagation();  // Prevent the click from propagating to the window
-    dropdown.classList.toggle('hidden');
+const dropdownButtons = ['dropdownOfferButton', 'dropdownStoreButton', 'dropdownBrandsButton'];
+
+dropdownRightNavButton.addEventListener('click', function() {
+    dropdownRightNav.classList.toggle('hidden');
 });
 
-// Close dropdown when clicking outside of the button and dropdown
-window.addEventListener('click', function(event) {
-    if (!dropdown.contains(event.target) && !dropdownButton.contains(event.target)) {
+dropdownButtons.forEach(buttonId => {
+    const button = document.getElementById(buttonId);
+    const dropdown = document.getElementById(buttonId.replace('Button', ''));
+
+    button.addEventListener('click', function(event) {
+        event.stopPropagation();
+
+        dropdownButtons.forEach(id => {
+            if (id !== buttonId) {
+                const otherDropdown = document.getElementById(id.replace('Button', ''));
+                otherDropdown.classList.add('hidden');
+            }
+        });
+
+        dropdown.classList.toggle('hidden');
+    });
+
+    dropdown.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+});
+
+window.addEventListener('click', function() {
+    dropdownButtons.forEach(buttonId => {
+        const dropdown = document.getElementById(buttonId.replace('Button', ''));
         dropdown.classList.add('hidden');
-    }
+    });
 });
 
-$(document).ready(function() {
-    $('#dropdownNavbarLink').on('click', function() {
-        $('#dropdownNavbar').toggleClass('hidden');
-    });
-
-    $(document).on('click', function(event) {
-        if (!$(event.target).closest('#dropdownNavbarLink').length && !$(event.target).closest('#dropdownNavbar').length) {
-            $('#dropdownNavbar').addClass('hidden');
-        }
-    });
+document.getElementById('close-button').addEventListener('click', function() {
+    document.getElementById('promo-section').classList.add('hidden');
 });

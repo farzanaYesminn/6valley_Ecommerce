@@ -4,40 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6valley</title>
-<!--Font Awsome--><script src="https://kit.fontawesome.com/0e44beec84.js" crossorigin="anonymous"></script>
- <!-- Tailwind CSS stylesheet --> 
- <script src="https://cdn.tailwindcss.com"></script>
- <link rel="stylesheet" href="/styles//style.css">
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-</head>
+    <script src="https://kit.fontawesome.com/0e44beec84.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
-<!--Header-->
-    <header>
-        <!--Ad section-->
-        <section>
-            <div class="flex items-center bg-[url('/images/ads-bg.png')] bg-cover bg-center p-1">
-                <i class="fa-solid fa-xmark text-[#005ABC] p-2"></i>
-                <div class="mx-auto text-center text-[#005ABC]">
-                    50% Off On Black Friday For All Stores - Valid Until 31 January, 2023
-                </div>
+<!-- Header -->
+<header>
+    <!-- Ad section -->
+    <section id="promo-section">
+        <div class="flex items-center bg-cover p-1" style="background-image: url('/images/ads-bg.png');">
+            <i class="fa-solid fa-xmark text-[#005ABC] p-2" id="close-button"></i>
+            <div class="mx-auto text-center text-[#005ABC]">
+                50% Off On Black Friday For All Stores - Valid Until 31 January, 2023
             </div>
-        </section>
-        
-            
-            
-        </section>
-        <!--NavBar-->
-        <nav>
-            <!--Top Navbar-->
-            <section >
+        </div>
+    </section>
+    <!-- NavBar -->
+    <nav>
+        <!-- Top Navbar -->
+        <section>
             <div class="flex justify-around bg-[#0D1D35] py-5 text-white">
                 <div>
                     <div class="flex gap-10">
-                        <button class="bg-[#1B7FED] px-2 rounded-full">Become a Seller </button>
+                        <button class="bg-[#1B7FED] px-2 rounded-full">Become a Seller</button>
                         <p>Free Express Shipping </p>
                     </div>
 
@@ -50,241 +41,887 @@
                     <div class="flex gap-1 justify-items-center">
                         <p>EN</p>
                         <i class="fa-solid fa-angle-down pt-1"></i>
-                    </div >
+                    </div>
                     <div class="flex gap-5 pt-1">
-                        <i class="fa-brands fa-square-twitter" ></i>
+                        <i class="fa-brands fa-square-twitter"></i>
                         <i class="fa-brands fa-facebook"></i>
                         <i class="fa-brands fa-instagram"></i>
-                        
                     </div>
-
                 </div>
             </div>
 
-                <div class="flex justify-around py-4">
-                    <div>
-                        <img src="/images//6vally-logo.png">
-                    </div>
-                    <div>
-                        <div>
-                            <div class="flex items-center justify-center  ">
-                                <div class="flex border border-gray-300 rounded-full overflow-hidden">
-                                    <div class="flex justify-between pl-10 px-4 text-gray-400">
-
-                                        <i class="fa-solid fa-bars p-3 "></i>
-                                        <i class="fa-solid fa-angle-down p-3"></i>
-                                        <p class="h-5 border-x  border-gray-300 my-auto "></p>
-
-                                    </div>
-                                    <input type="text" placeholder="Search for items or store..." class="pr-20 " />
-                                    <button class="bg-blue-500 text-white px-6 py-2">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            
+            <div class="flex justify-around py-4">
+                <div>
+                    <img src="/images/6valley-logo.png" alt='6valley logo'>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="flex border border-gray-300 rounded-full overflow-hidden">
+                        <div class="flex justify-between pl-10 px-4 text-gray-400">
+                            <i class="fa-solid fa-bars p-3"></i>
+                            <i class="fa-solid fa-angle-down p-3"></i>
+                            <p class="h-5 border-x border-gray-300 my-auto"></p>
                         </div>
-                    </div>
-                    <div class="flex gap-5 text-gray-400">
-                        <i class="fa-solid fa-circle-user leading-[3rem] text-3xl rounded-full"></i>
-                        <p class="h-5 border-x  border-gray-300  my-auto"></p>
-                        <div class="relative inline-block">
-                            <!-- Icon -->
-                            <i class="fa-solid fa-shuffle leading-[3rem] text-2xl"></i>
-                                <span class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-2/2 bg-[#1B7FED] text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">
-                                6
-                            </span>
+                        <div style="position: relative; display: flex; align-items: center;">
+                            <label for="search"
+                                   style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Search
+                                for items or store...</label>
+                            <input id="search" type="text" placeholder="Search for items or store..."
+                                   style="border: none; padding-right: 3rem; height: 2rem; box-sizing: border-box;"/>
                         </div>
-                        <p class="h-5 border-x  border-gray-300  my-auto"></p>
-                        <div class="relative inline-block">
-                            <!-- Icon -->
-                            <i class="fa-regular fa-heart leading-[3rem] text-2xl"></i>
-                                <span class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-2/2 bg-[#1B7FED] text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">
-                                6
-                            </span>
-                        </div>
-                        <p class="h-5 border-x  border-gray-300  my-auto"></p>
-                        <div class="relative inline-block">
-                            <!-- Icon -->
-                            <i class="fa-solid fa-cart-shopping  leading-[3rem] text-2xl"></i>
-                                <span class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-2/2 bg-[#1B7FED] text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">
-                                6
-                            </span>
-                        </div>
-
+                        <button class="bg-blue-500 text-white px-6 py-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </div>
                 </div>
-
-            </section>
-            <!--Main Navbar-->
-            <section class="grid grid-cols-4">
-                <!--Left-->
-                <div class="pl-5 ">
-                    <button class="text-white bg-blue-700 hover:bg-blue-800 font-medium text-sm w-full px-5 py-5 justify-around inline-flex gap-7 items-center" type="button" id="dropdownButton">
-                        <i class="fa-solid fa-bars"></i>
-                        Browse Category
-                        <i class="fa-solid fa-angle-down"></i>
-                    </button>
-                
-                    <!-- Dropdown menu -->
-                    <div class="bg-white text-base list-none divide-gray-100 rounded shadow px-5 text-left mt-2" id="dropdown">
-                        <ul aria-labelledby="dropdownButton">
-                            <li class="flex justify-between border-b pt-1">
-                                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Women’s Fashion</a>
-                                <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
-                            </li>
-                            <li class="flex justify-between border-b pt-1">
-                                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Men’s Fashion</a>
-                                <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
-                            </li>
-                            <li class="flex justify-between border-b pt-1">
-                                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Personal Care</a>
-                                <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
-                            </li>
-                            <li class="flex justify-between border-b pt-1">
-                                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Phone & Telecommunication</a>
-                                <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
-                            </li>
-                            <li class="flex justify-between border-b pt-1">
-                                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Jewellery & Watches</a>
-                                <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
-                            </li>
-                            <li class="flex justify-between border-b pt-1">
-                                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Home & Appliances</a>
-                                <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
-                            </li>
-                            <li class="flex justify-between border-b pt-1">
-                                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Bags & Shoes</a>
-                                <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
-                            </li>
-                            <li class="flex justify-between border-b pt-1">
-                                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Beauty, Health & Hair</a>
-                                <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
-                            </li>
-                        </ul>
+                <div class="flex gap-5 text-gray-400">
+                    <i class="fa-solid fa-circle-user leading-[3rem] text-3xl rounded-full"></i>
+                    <p class="h-5 border-x  border-gray-300  my-auto"></p>
+                    <div class="relative inline-block">
+                        <!-- Icon -->
+                        <i class="fa-solid fa-shuffle leading-[3rem] text-2xl"></i>
+                        <span class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-2/2 bg-[#1B7FED] text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">6</span>
+                    </div>
+                    <p class="h-5 border-x  border-gray-300  my-auto"></p>
+                    <div class="relative inline-block">
+                        <!-- Icon -->
+                        <i class="fa-regular fa-heart leading-[3rem] text-2xl"></i>
+                        <span class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-2/2 bg-[#1B7FED] text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">6</span>
+                    </div>
+                    <p class="h-5 border-x  border-gray-300  my-auto"></p>
+                    <div class="relative inline-block">
+                        <!-- Icon -->
+                        <i class="fa-solid fa-cart-shopping  leading-[3rem] text-2xl"></i>
+                        <span class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-2/2 bg-[#1B7FED] text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">6</span>
                     </div>
                 </div>
-                <!--Right-->
-                <div class="flex-row col-span-3">
-                    <!--Top-->
-                    <div>
-                        <div class=" mx-auto justify-center border-y py-5">
-    
-                            <div class="border-gray-200 px-10">
-                           
-            
-                                <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
+            </div>
+        </section>
+        <!-- Main Navbar -->
+        <section class="grid grid-cols-4">
+            <!-- Left -->
+            <div class="pl-5">
+                <button class="text-white bg-blue-700 hover:bg-blue-800 font-medium text-sm w-full px-5 py-5 justify-around inline-flex gap-7 items-center"
+                        type="button" id="dropdownRightNavButton">
+                    <i class="fa-solid fa-bars"></i>
+                    Browse Category
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div class="bg-white text-base list-none divide-gray-100 rounded shadow px-5 text-left mt-2"
+                     id="dropdownRightNav">
+                    <ul aria-labelledby="dropdownRightNavButton">
+                        <li class="flex justify-between border-b pt-1">
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Women’s
+                                Fashion</a>
+                            <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
+                        </li>
+                        <li class="flex justify-between border-b pt-1">
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Men’s
+                                Fashion</a>
+                            <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
+                        </li>
+                        <li class="flex justify-between border-b pt-1">
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Personal
+                                Care</a>
+                            <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
+                        </li>
+                        <li class="flex justify-between border-b pt-1">
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Phone &
+                                Telecommunication</a>
+                            <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
+                        </li>
+                        <li class="flex justify-between border-b pt-1">
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Jewellery &
+                                Watches</a>
+                            <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
+                        </li>
+                        <li class="flex justify-between border-b pt-1">
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Home &
+                                Appliances</a>
+                            <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
+                        </li>
+                        <li class="flex justify-between border-b pt-1">
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Bags & Shoes</a>
+                            <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
+                        </li>
+                        <li class="flex justify-between border-b pt-1">
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Beauty, Health &
+                                Hair</a>
+                            <i class="fa-solid fa-chevron-right leading-[3rem]"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Right -->
+            <div class="flex-row col-span-3">
+                <!-- Top -->
+                <div>
+                    <div class=" mx-auto justify-center border-y py-5">
+                        <div class="border-gray-200 px-10">
+                            <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
                                 <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
                                     <li>
-                                    <a href="#" class="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none" aria-current="page">Home</a>
+                                        <a href="#"
+                                           class="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none"
+                                           aria-current="page">Home</a>
                                     </li>
                                     <li>
-                                        <button id="dropdownNavbarLink" class="flex gap-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">
-                                            Offers 
+                                        <button id="dropdownOfferButton"
+                                                class="flex gap-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">
+                                            Offers
                                             <i class="fa-solid fa-angle-down"></i>
                                         </button>
                                         <!-- Dropdown menu -->
-                                        <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                                        <div id="dropdownOffer"
+                                             class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
                                             <ul class="py-1">
                                                 <li>
-                                                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Offer 1</a>
+                                                    <a href="#"
+                                                       class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Offer
+                                                        1</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Offer 2</a>
+                                                    <a href="#"
+                                                       class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Offer
+                                                        2</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Offer 3</a>
+                                                    <a href="#"
+                                                       class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Offer
+                                                        3</a>
                                                 </li>
-                                                </ul>
-                                                </div>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li>
-                                        <button id="dropdownNavbarLink" class="flex gap-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">
+                                        <button id="dropdownStoreButton"
+                                                class="flex gap-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">
                                             Stores
                                             <i class="fa-solid fa-angle-down"></i>
                                         </button>
                                         <!-- Dropdown menu -->
-                                        <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                                        <div id="dropdownStore"
+                                             class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
                                             <ul class="py-1">
                                                 <li>
-                                                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Store 1</a>
+                                                    <a href="#"
+                                                       class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Store
+                                                        1</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Store 2</a>
+                                                    <a href="#"
+                                                       class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Store
+                                                        2</a>
                                                 </li>
-                                                </ul>
-                                                </div>
-                                                <li>
-                                                    <button id="dropdownNavbarLink" class="flex gap-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">
-                                                        Brands 
-                                                        <i class="fa-solid fa-angle-down"></i>
-                                                    </button>
-                                                    <!-- Dropdown menu -->
-                                                    <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
-                                                    <ul class="py-1">
-                                                        <li>
-                                                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Brand 1</a>
-                                                        </li>
-                                    
-                                                        </ul>
-                                                    </div>
-                                            </li>
+                                            </ul>
+                                        </div>
                                     <li>
-                                    <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Discounted Products
-                                        <i class="fa-solid fa-percent mx-5 text-white bg-yellow-300 px-2 py-1 rounded-full"></i>
-
-                                    </a>
+                                        <button id="dropdownBrandsButton"
+                                                class="flex gap-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">
+                                            Brands<i class="fa-solid fa-angle-down"></i></button>
+                                        <!-- Dropdown menu -->
+                                        <div id="dropdownBrands"
+                                             class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                                            <ul class="py-1">
+                                                <li>
+                                                    <a href="#"
+                                                       class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Brand
+                                                        1</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                           class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Discounted
+                                            Products<i
+                                                    class="fa-solid fa-percent mx-5 text-white bg-yellow-300 px-2 py-1 rounded-full"></i>
+                                        </a>
                                     </li>
                                 </ul>
-                                </div>
                             </div>
-                            </div>
-                    
-                        </div>
-
-                    <div class="grid grid-cols-3 gap-2 p-5">
-                        <div class="grid grid-rows-2 gap-2 col-span-2">
-                            <img src="/images/header1.png" class="">
-                            <div class="grid grid-cols-2 gap-2" >
-                                <img src="/images/header2.png" class="h-[200px]">
-                                <img src="/images/header3.png" class="h-[200px]">
-                            </div>
-                        </div>
-                        <div class="bg-[url('/images/header4.png')] bg-cover bg-center h-110   text-white text-center py-10">
-                            <p class="font-bold text-3xl pb-5">New Launch</p>
-                            <p class="text-1xl">with new vision
-                            </p>
                         </div>
                     </div>
                 </div>
-                
-            </section>
-            
-        </nav>
-    </header>
- <!--Header-->
 
-<!--Main Body-->
-    <main>
-        <!--Recomended For You section-->
-        <section class="p-10">
-            <p class="text-2xl font-semibold text-center">Recommended For You</p>
-
-            <div>
-                <ul class="flex justify-center gap-10 py-8 text-semibold ">
-                    <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">Featured Products</li>
-                    <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">Top Rated</li>
-                    <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">Best Selling</li>
-                    <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">Latest Products</li>
-                    <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">New Arrivals</li>
-                </ul>
+                <div class="grid grid-cols-3 gap-2 p-5">
+                    <div class="grid grid-rows-2 gap-2 col-span-2">
+                        <img src="/images/header1.png" alt='header 1'>
+                        <div class="grid grid-cols-2 gap-2">
+                            <img src="/images/header2.png" class="h-[200px]" alt='header 2'>
+                            <img src="/images/header3.png" class="h-[200px]" alt='header 3'>
+                        </div>
+                    </div>
+                    <div class="bg-[url('/images/header4.png')] bg-cover bg-center h-110   text-white text-center py-10">
+                        <p class="font-bold text-3xl pb-5">New Launch</p>
+                        <p class="text-1xl">with new vision
+                        </p>
+                    </div>
+                </div>
             </div>
+
+        </section>
+
+    </nav>
+</header>
+<!-- Header -->
+
+<!-- Main Body -->
+<main>
+    <!-- Recommended For You section -->
+    <section class="p-10">
+        <p class="text-2xl font-semibold text-center">Recommended For You</p>
+
+        <div>
+            <ul class="flex justify-center gap-10 py-8 text-semibold ">
+                <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">Featured Products</li>
+                <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">Top Rated</li>
+                <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">Best Selling</li>
+                <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">Latest Products</li>
+                <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">New Arrivals</li>
+            </ul>
+        </div>
+
+        <div class="flex flex-col gap-5">
+            <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-2">
+                <!--1-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
+                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
+                            -20%
+                        </span>
+                    </div>
+                    <div class="mt-4 mx-4 text-center">
+                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
+                            <div class="relative group">
+                                <div class="overflow-hidden">
+                                    <a href="#">
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product4.png" alt="Product Image"/>
+                                    </a>
+                                </div>
+                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
+                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            (10)
+                        </p>
+                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
+                            Morning Mart
+                        </p>
+                        <h2 class="font-medium text-base md:text-lg text-gray-800">
+                            Evening Dress
+                        </h2>
+                        <div class="flex gap-2 justify-center place-items-center">
+                            <del class="text-sm uppercase">15$</del>
+                            <span class="text-lg font-semibold">12$</span>
+                        </div>
+                    </div>
+                </div>
+                <!--2-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
+                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
+                            -20%
+                        </span>
+                    </div>
+                    <div class="mt-4 mx-4 text-center">
+                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
+                            <div class="relative group">
+                                <div class="overflow-hidden">
+                                    <a href="#">
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product1.png" alt="Product Image"/>
+                                    </a>
+                                </div>
+                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
+                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            (10)
+                        </p>
+                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
+                            Morning Mart
+                        </p>
+                        <h2 class="font-medium text-base md:text-lg text-gray-800">
+                            Evening Dress
+                        </h2>
+                        <div class="flex gap-2 justify-center place-items-center">
+                            <del class="text-sm uppercase">15$</del>
+                            <span class="text-lg font-semibold">12$</span>
+                        </div>
+                    </div>
+                </div>
+                <!--3-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
+                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
+                            -20%
+                        </span>
+                    </div>
+                    <div class="mt-4 mx-4 text-center">
+                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
+                            <div class="relative group">
+                                <div class="overflow-hidden">
+                                    <a href="#">
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product2.png" alt="Product Image"/>
+                                    </a>
+                                </div>
+                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
+                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            (10)
+                        </p>
+                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
+                            Morning Mart
+                        </p>
+                        <h2 class="font-medium text-base md:text-lg text-gray-800">
+                            Evening Dress
+                        </h2>
+                        <div class="flex gap-2 justify-center place-items-center">
+                            <del class="text-sm uppercase">15$</del>
+                            <span class="text-lg font-semibold">12$</span>
+                        </div>
+                    </div>
+                </div>
+                <!--4-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
+                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
+                            -20%
+                        </span>
+                    </div>
+                    <div class="mt-4 mx-4 text-center">
+                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
+                            <div class="relative group">
+                                <div class="overflow-hidden">
+                                    <a href="#">
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product3.png" alt="Product Image"/>
+                                    </a>
+                                </div>
+                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
+                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            (10)
+                        </p>
+                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
+                            Morning Mart
+                        </p>
+                        <h2 class="font-medium text-base md:text-lg text-gray-800">
+                            Evening Dress
+                        </h2>
+                        <div class="flex gap-2 justify-center place-items-center">
+                            <del class="text-sm uppercase">15$</del>
+                            <span class="text-lg font-semibold">12$</span>
+                        </div>
+                    </div>
+                </div>
+                <!--5-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
+                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
+                            -20%
+                        </span>
+                    </div>
+                    <div class="mt-4 mx-4 text-center">
+                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
+                            <div class="relative group">
+                                <div class="overflow-hidden">
+                                    <a href="#">
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product4.png" alt="Product Image"/>
+                                    </a>
+                                </div>
+                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
+                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            (10)
+                        </p>
+                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
+                            Morning Mart
+                        </p>
+                        <h2 class="font-medium text-base md:text-lg text-gray-800">
+                            Evening Dress
+                        </h2>
+                        <div class="flex gap-2 justify-center place-items-center">
+                            <del class="text-sm uppercase">15$</del>
+                            <span class="text-lg font-semibold">12$</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-2">
+
+                <!--6-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
+                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
+                            -20%
+                        </span>
+                    </div>
+                    <div class="mt-4 mx-4 text-center">
+                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
+                            <div class="relative group">
+                                <div class="overflow-hidden">
+                                    <a href="#">
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product5.png" alt="Product Image"/>
+                                    </a>
+                                </div>
+                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
+                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            (10)
+                        </p>
+                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
+                            Morning Mart
+                        </p>
+                        <h2 class="font-medium text-base md:text-lg text-gray-800">
+                            Evening Dress
+                        </h2>
+                        <div class="flex gap-2 justify-center place-items-center">
+                            <del class="text-sm uppercase">15$</del>
+                            <span class="text-lg font-semibold">12$</span>
+                        </div>
+                    </div>
+                </div>
+                <!--7-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
+                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
+                            -20%
+                        </span>
+                    </div>
+                    <div class="mt-4 mx-4 text-center">
+                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
+                            <div class="relative group">
+                                <div class="overflow-hidden">
+                                    <a href="#">
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product6.png" alt="Product Image"/>
+                                    </a>
+                                </div>
+                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
+                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            (10)
+                        </p>
+                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
+                            Morning Mart
+                        </p>
+                        <h2 class="font-medium text-base md:text-lg text-gray-800">
+                            Evening Dress
+                        </h2>
+                        <div class="flex gap-2 justify-center place-items-center">
+                            <del class="text-sm uppercase">15$</del>
+                            <span class="text-lg font-semibold">12$</span>
+                        </div>
+                    </div>
+                </div>
+                <!--8-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
+                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
+                            -20%
+                        </span>
+                    </div>
+                    <div class="mt-4 mx-4 text-center">
+                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
+                            <div class="relative group">
+                                <div class="overflow-hidden">
+                                    <a href="#">
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product7.png" alt="Product Image"/>
+                                    </a>
+                                </div>
+                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
+                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            (10)
+                        </p>
+                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
+                            Morning Mart
+                        </p>
+                        <h2 class="font-medium text-base md:text-lg text-gray-800">
+                            Evening Dress
+                        </h2>
+                        <div class="flex gap-2 justify-center place-items-center">
+                            <del class="text-sm uppercase">15$</del>
+                            <span class="text-lg font-semibold">12$</span>
+                        </div>
+                    </div>
+                </div>
+                <!--9-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
+                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
+                            -20%
+                        </span>
+                    </div>
+                    <div class="mt-4 mx-4 text-center">
+                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
+                            <div class="relative group">
+                                <div class="overflow-hidden">
+                                    <a href="#">
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product8.png" alt="Product Image"/>
+                                    </a>
+                                </div>
+                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
+                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            (10)
+                        </p>
+                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
+                            Morning Mart
+                        </p>
+                        <h2 class="font-medium text-base md:text-lg text-gray-800">
+                            Evening Dress
+                        </h2>
+                        <div class="flex gap-2 justify-center place-items-center">
+                            <del class="text-sm uppercase">15$</del>
+                            <span class="text-lg font-semibold">12$</span>
+                        </div>
+                    </div>
+                </div>
+                <!--10-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
+                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
+                            -20%
+                        </span>
+                    </div>
+                    <div class="mt-4 mx-4 text-center">
+                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
+                            <div class="relative group">
+                                <div class="overflow-hidden">
+                                    <a href="#">
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product8.png" alt="Product Image"/>
+                                    </a>
+                                </div>
+                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
+                                            <a href="#">
+                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
+                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
+                            (10)
+                        </p>
+                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
+                            Morning Mart
+                        </p>
+                        <h2 class="font-medium text-base md:text-lg text-gray-800">
+                            Evening Dress
+                        </h2>
+                        <div class="flex gap-2 justify-center place-items-center">
+                            <del class="text-sm uppercase">15$</del>
+                            <span class="text-lg font-semibold">12$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--All Products section-->
+    <section class="p-10">
+        <p class="text-2xl font-semibold border-b border-gray-400 mb-10 py-5">All Products</p>
 
         <div class="flex flex-col gap-5">
             <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-2">
 
-           <!--1--><div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
+                <!--1-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
                         <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
                             -20%
                         </span>
@@ -294,7 +931,8 @@
                             <div class="relative group">
                                 <div class="overflow-hidden">
                                     <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product4.png" alt="Product Image" />
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product4.png" alt="Product Image"/>
                                     </a>
                                 </div>
                                 <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
@@ -343,8 +981,9 @@
                         </div>
                     </div>
                 </div>
-            <!--2-->    <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
+                <!--2-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
                         <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
                             -20%
                         </span>
@@ -354,7 +993,8 @@
                             <div class="relative group">
                                 <div class="overflow-hidden">
                                     <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product1.png" alt="Product Image" />
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product1.png" alt="Product Image"/>
                                     </a>
                                 </div>
                                 <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
@@ -403,8 +1043,9 @@
                         </div>
                     </div>
                 </div>
-        <!--3--><div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
+                <!--3-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
                         <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
                             -20%
                         </span>
@@ -414,7 +1055,8 @@
                             <div class="relative group">
                                 <div class="overflow-hidden">
                                     <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product2.png" alt="Product Image" />
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product2.png" alt="Product Image"/>
                                     </a>
                                 </div>
                                 <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
@@ -463,8 +1105,9 @@
                         </div>
                     </div>
                 </div>
-         <!--4--><div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
+                <!--4-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
                         <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
                             -20%
                         </span>
@@ -474,7 +1117,8 @@
                             <div class="relative group">
                                 <div class="overflow-hidden">
                                     <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product3.png" alt="Product Image" />
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product3.png" alt="Product Image"/>
                                     </a>
                                 </div>
                                 <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
@@ -523,8 +1167,9 @@
                         </div>
                     </div>
                 </div>
-             <!--5-->   <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
+                <!--5-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
                         <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
                             -20%
                         </span>
@@ -534,7 +1179,8 @@
                             <div class="relative group">
                                 <div class="overflow-hidden">
                                     <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product4.png" alt="Product Image" />
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product4.png" alt="Product Image"/>
                                     </a>
                                 </div>
                                 <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
@@ -583,13 +1229,14 @@
                         </div>
                     </div>
                 </div>
-            
-                
+
+
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-2">
 
-           <!--6--><div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
+                <!--6-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
                         <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
                             -20%
                         </span>
@@ -599,7 +1246,8 @@
                             <div class="relative group">
                                 <div class="overflow-hidden">
                                     <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product5.png" alt="Product Image" />
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product5.png" alt="Product Image"/>
                                     </a>
                                 </div>
                                 <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
@@ -648,8 +1296,9 @@
                         </div>
                     </div>
                 </div>
-            <!--7-->    <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
+                <!--7-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
                         <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
                             -20%
                         </span>
@@ -659,7 +1308,8 @@
                             <div class="relative group">
                                 <div class="overflow-hidden">
                                     <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product6.png" alt="Product Image" />
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product6.png" alt="Product Image"/>
                                     </a>
                                 </div>
                                 <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
@@ -708,8 +1358,9 @@
                         </div>
                     </div>
                 </div>
-        <!--8--><div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
+                <!--8-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
                         <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
                             -20%
                         </span>
@@ -719,7 +1370,8 @@
                             <div class="relative group">
                                 <div class="overflow-hidden">
                                     <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product7.png" alt="Product Image" />
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product7.png" alt="Product Image"/>
                                     </a>
                                 </div>
                                 <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
@@ -768,8 +1420,9 @@
                         </div>
                     </div>
                 </div>
-         <!--9--><div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
+                <!--9-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
                         <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
                             -20%
                         </span>
@@ -779,7 +1432,8 @@
                             <div class="relative group">
                                 <div class="overflow-hidden">
                                     <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product8.png" alt="Product Image" />
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product8.png" alt="Product Image"/>
                                     </a>
                                 </div>
                                 <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
@@ -828,8 +1482,9 @@
                         </div>
                     </div>
                 </div>
-             <!--10-->   <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
+                <!--10-->
+                <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="relative ">
                         <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
                             -20%
                         </span>
@@ -839,7 +1494,8 @@
                             <div class="relative group">
                                 <div class="overflow-hidden">
                                     <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product8.png" alt="Product Image" />
+                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50"
+                                             src="/images/product8.png" alt="Product Image"/>
                                     </a>
                                 </div>
                                 <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
@@ -888,844 +1544,193 @@
                         </div>
                     </div>
                 </div>
-            
-                
             </div>
-
         </div>
-            
-            
-
-        </section>
-        <!--All Products section-->
-        <section class="p-10">
-            <p class="text-2xl font-semibold border-b border-gray-400 mb-10 py-5">All Products</p>
-
-        <div class="flex flex-col gap-5">
-            <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-2">
-
-           <!--1--><div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
-                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
-                            -20%
-                        </span>
-                    </div>
-                    <div class="mt-4 mx-4 text-center">
-                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
-                            <div class="relative group">
-                                <div class="overflow-hidden">
-                                    <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product4.png" alt="Product Image" />
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
-                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            (10)
-                        </p>
-                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
-                            Morning Mart
-                        </p>
-                        <h2 class="font-medium text-base md:text-lg text-gray-800">
-                            Evening Dress
-                        </h2>
-                        <div class="flex gap-2 justify-center place-items-center">
-                            <del class="text-sm uppercase">15$</del>
-                            <span class="text-lg font-semibold">12$</span>
-                        </div>
-                    </div>
-                </div>
-            <!--2-->    <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
-                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
-                            -20%
-                        </span>
-                    </div>
-                    <div class="mt-4 mx-4 text-center">
-                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
-                            <div class="relative group">
-                                <div class="overflow-hidden">
-                                    <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product1.png" alt="Product Image" />
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
-                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            (10)
-                        </p>
-                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
-                            Morning Mart
-                        </p>
-                        <h2 class="font-medium text-base md:text-lg text-gray-800">
-                            Evening Dress
-                        </h2>
-                        <div class="flex gap-2 justify-center place-items-center">
-                            <del class="text-sm uppercase">15$</del>
-                            <span class="text-lg font-semibold">12$</span>
-                        </div>
-                    </div>
-                </div>
-        <!--3--><div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
-                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
-                            -20%
-                        </span>
-                    </div>
-                    <div class="mt-4 mx-4 text-center">
-                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
-                            <div class="relative group">
-                                <div class="overflow-hidden">
-                                    <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product2.png" alt="Product Image" />
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
-                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            (10)
-                        </p>
-                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
-                            Morning Mart
-                        </p>
-                        <h2 class="font-medium text-base md:text-lg text-gray-800">
-                            Evening Dress
-                        </h2>
-                        <div class="flex gap-2 justify-center place-items-center">
-                            <del class="text-sm uppercase">15$</del>
-                            <span class="text-lg font-semibold">12$</span>
-                        </div>
-                    </div>
-                </div>
-         <!--4--><div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
-                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
-                            -20%
-                        </span>
-                    </div>
-                    <div class="mt-4 mx-4 text-center">
-                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
-                            <div class="relative group">
-                                <div class="overflow-hidden">
-                                    <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product3.png" alt="Product Image" />
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
-                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            (10)
-                        </p>
-                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
-                            Morning Mart
-                        </p>
-                        <h2 class="font-medium text-base md:text-lg text-gray-800">
-                            Evening Dress
-                        </h2>
-                        <div class="flex gap-2 justify-center place-items-center">
-                            <del class="text-sm uppercase">15$</del>
-                            <span class="text-lg font-semibold">12$</span>
-                        </div>
-                    </div>
-                </div>
-             <!--5-->   <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
-                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
-                            -20%
-                        </span>
-                    </div>
-                    <div class="mt-4 mx-4 text-center">
-                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
-                            <div class="relative group">
-                                <div class="overflow-hidden">
-                                    <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product4.png" alt="Product Image" />
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
-                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            (10)
-                        </p>
-                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
-                            Morning Mart
-                        </p>
-                        <h2 class="font-medium text-base md:text-lg text-gray-800">
-                            Evening Dress
-                        </h2>
-                        <div class="flex gap-2 justify-center place-items-center">
-                            <del class="text-sm uppercase">15$</del>
-                            <span class="text-lg font-semibold">12$</span>
-                        </div>
-                    </div>
-                </div>
-            
-                
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-2">
-
-           <!--6--><div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
-                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
-                            -20%
-                        </span>
-                    </div>
-                    <div class="mt-4 mx-4 text-center">
-                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
-                            <div class="relative group">
-                                <div class="overflow-hidden">
-                                    <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product5.png" alt="Product Image" />
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
-                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            (10)
-                        </p>
-                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
-                            Morning Mart
-                        </p>
-                        <h2 class="font-medium text-base md:text-lg text-gray-800">
-                            Evening Dress
-                        </h2>
-                        <div class="flex gap-2 justify-center place-items-center">
-                            <del class="text-sm uppercase">15$</del>
-                            <span class="text-lg font-semibold">12$</span>
-                        </div>
-                    </div>
-                </div>
-            <!--7-->    <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
-                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
-                            -20%
-                        </span>
-                    </div>
-                    <div class="mt-4 mx-4 text-center">
-                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
-                            <div class="relative group">
-                                <div class="overflow-hidden">
-                                    <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product6.png" alt="Product Image" />
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
-                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            (10)
-                        </p>
-                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
-                            Morning Mart
-                        </p>
-                        <h2 class="font-medium text-base md:text-lg text-gray-800">
-                            Evening Dress
-                        </h2>
-                        <div class="flex gap-2 justify-center place-items-center">
-                            <del class="text-sm uppercase">15$</del>
-                            <span class="text-lg font-semibold">12$</span>
-                        </div>
-                    </div>
-                </div>
-        <!--8--><div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
-                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
-                            -20%
-                        </span>
-                    </div>
-                    <div class="mt-4 mx-4 text-center">
-                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
-                            <div class="relative group">
-                                <div class="overflow-hidden">
-                                    <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product7.png" alt="Product Image" />
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
-                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            (10)
-                        </p>
-                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
-                            Morning Mart
-                        </p>
-                        <h2 class="font-medium text-base md:text-lg text-gray-800">
-                            Evening Dress
-                        </h2>
-                        <div class="flex gap-2 justify-center place-items-center">
-                            <del class="text-sm uppercase">15$</del>
-                            <span class="text-lg font-semibold">12$</span>
-                        </div>
-                    </div>
-                </div>
-         <!--9--><div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
-                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
-                            -20%
-                        </span>
-                    </div>
-                    <div class="mt-4 mx-4 text-center">
-                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
-                            <div class="relative group">
-                                <div class="overflow-hidden">
-                                    <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product8.png" alt="Product Image" />
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
-                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            (10)
-                        </p>
-                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
-                            Morning Mart
-                        </p>
-                        <h2 class="font-medium text-base md:text-lg text-gray-800">
-                            Evening Dress
-                        </h2>
-                        <div class="flex gap-2 justify-center place-items-center">
-                            <del class="text-sm uppercase">15$</del>
-                            <span class="text-lg font-semibold">12$</span>
-                        </div>
-                    </div>
-                </div>
-             <!--10-->   <div class=" border border-gray-300 rounded-xl duration-300 ease-in-out hover:-translate-y-2">
-                    <div  class="relative ">
-                        <span class="absolute top-0 left-0 px-3 py-2 rounded-full z-10 bg-red-500 text-sm font-medium text-white select-none">
-                            -20%
-                        </span>
-                    </div>
-                    <div class="mt-4 mx-4 text-center">
-                        <div class="rounded-lg bg-white flex justify-center relative overflow-hidden h-[175px] w-[208px] mx-auto">
-                            <div class="relative group">
-                                <div class="overflow-hidden">
-                                    <a href="#">
-                                        <img class="w-full h-[175px] rounded-[5px] transition duration-300 ease-in-out group-hover:grayscale group-hover:brightness-50" src="/images/product8.png" alt="Product Image" />
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 flex justify-center items-end flex-col bg-gray-300 bg-opacity-0 group-hover:bg-opacity-90 rounded-[5px] opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                                    <div class="flex flex-col justify-between h-full p-4 space-y-4">
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-bag-shopping text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-regular fa-heart text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-retweet text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-[40px] h-[40px] bg-white flex justify-center items-center rounded-full">
-                                            <a href="#">
-                                                <i class="fa-solid fa-eye text-[#1B7FED]"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="flex gap-2 justify-center place-items-center mt-2 text-sm text-gray-800 line-clamp-1">
-                            <i class="fa-solid fa-star text-yellow-400 leading-3 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            <i class="fa-solid fa-star text-yellow-400 leading-[1rem]"></i>
-                            (10)
-                        </p>
-                        <p class="mt-2 text-sm text-gray-800 line-clamp-1">
-                            Morning Mart
-                        </p>
-                        <h2 class="font-medium text-base md:text-lg text-gray-800">
-                            Evening Dress
-                        </h2>
-                        <div class="flex gap-2 justify-center place-items-center">
-                            <del class="text-sm uppercase">15$</del>
-                            <span class="text-lg font-semibold">12$</span>
-                        </div>
-                    </div>
-                </div>
-            
-                
-            </div>
-
-        </div>
-            
-            
-
-        </section>
-        <!--Features section-->
-        <section class="bg-[#F2F3F4]">
-            <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:pt-10 ">
-                <div class="grid gap-4 lg:grid-cols-6 ">
-                    <!--1-->
-                    <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-4">
-                        <div class="flex items-center justify-center mb-4 rounded-full ">
+    </section>
+    <!--Features section-->
+    <section class="bg-[#F2F3F4]">
+        <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:pt-10 ">
+            <div class="grid gap-4 lg:grid-cols-6 ">
+                <!--1-->
+                <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-4">
+                    <div class="flex items-center justify-center mb-4 rounded-full ">
                         <i class="fa-solid fa-dollar-sign border border-gray-500 sm:mx-auto px-3 py-2 rounded-full"></i>
-                            
-                        </div>
-                        <h6 class="mb-3 text-xl font-bold leading-5">Great Value
-                        </h6>
-                        <p class="mb-3 text-sm text-gray-900">
-                            We offer competitive prices
-                            on over 100 million items
-                        </p>
                     </div>
-                    <!--2-->
-                    <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-2">
-                        <div class="flex items-center justify-center mb-4 rounded-full ">
+                    <h6 class="mb-3 text-xl font-bold leading-5">Great Value
+                    </h6>
+                    <p class="mb-3 text-sm text-gray-900">
+                        We offer competitive prices
+                        on over 100 million items
+                    </p>
+                </div>
+                <!--2-->
+                <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-2">
+                    <div class="flex items-center justify-center mb-4 rounded-full ">
                         <i class="fa-solid fa-truck-fast sm:mx-auto px-3 py-2 rounded-full"></i>
-                        </div>
-                        <h6 class="mb-3 text-xl font-bold leading-5">Whole Country Shipping
-
-                        </h6>
-                        <p class="mb-3 text-sm text-gray-900">
-                            We ship all over the country at any time, anywhere 
-
-                        </p>
                     </div>
-                    <!--3-->
-                    <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-2">
-                        <div class="flex items-center justify-center mb-4 rounded-full ">
+                    <h6 class="mb-3 text-xl font-bold leading-5">Whole Country Shipping
+                    </h6>
+                    <p class="mb-3 text-sm text-gray-900">
+                        We ship all over the country at any time, anywhere
+                    </p>
+                </div>
+                <!--3-->
+                <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-2">
+                    <div class="flex items-center justify-center mb-4 rounded-full ">
                         <i class="fa-solid fa-credit-card sm:mx-auto px-3 py-2 rounded-full"></i>
-                        
-                        </div>
-                        <h6 class="mb-3 text-xl font-bold leading-5">Safe Payment
-
-                        </h6>
-                        <p class="mb-3 text-sm text-gray-900">
-                            Pay with secure payment methods.
-
-                        </p>
                     </div>
-                    <!--4-->
-                    <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-2">
-                        <div class="flex items-center justify-center mb-4 rounded-full ">
-                            <i class="fa-solid fa-headset sm:mx-auto px-3 py-2 rounded-full"></i>
-                        </div>
-                        <h6 class="mb-3 text-xl font-bold leading-5">24/7 Support
-
-                        </h6>
-                        <p class="mb-3 text-sm text-gray-900">
-                            Pay with secure payment
-                            methods. 
-
-                        </p>
+                    <h6 class="mb-3 text-xl font-bold leading-5">Safe Payment
+                    </h6>
+                    <p class="mb-3 text-sm text-gray-900">
+                        Pay with secure payment methods.
+                    </p>
+                </div>
+                <!--4-->
+                <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-2">
+                    <div class="flex items-center justify-center mb-4 rounded-full ">
+                        <i class="fa-solid fa-headset sm:mx-auto px-3 py-2 rounded-full"></i>
                     </div>
-                    <!--5-->
-                    <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-2">
-                        <div class="flex items-center justify-center mb-4 rounded-full ">
-                            <i class="fa-solid fa-globe sm:mx-auto px-3 py-2 rounded-full"></i>
-                        </div>
-                        <h6 class="mb-3 text-xl font-bold leading-5">Multiple language
-
-
-                        </h6>
-                        <p class="mb-3 text-sm text-gray-900">
-                            Our comes in with multiple
-                            languages
-
-                        </p>
+                    <h6 class="mb-3 text-xl font-bold leading-5">24/7 Support
+                    </h6>
+                    <p class="mb-3 text-sm text-gray-900">
+                        Pay with secure payment
+                        methods.
+                    </p>
+                </div>
+                <!--5-->
+                <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-2">
+                    <div class="flex items-center justify-center mb-4 rounded-full ">
+                        <i class="fa-solid fa-globe sm:mx-auto px-3 py-2 rounded-full"></i>
                     </div>
-                    <!--6-->
-                    <div class=" sm:mx-auto sm:text-center  px-2">
-                        <div class="flex items-center justify-center mb-4 rounded-full ">
-                            <div class="flex">
-                                <i class="fa-brands fa-android sm:mx-auto px-3 py-2 rounded-full"></i>
-                                <i class="fa-brands fa-apple sm:mx-auto px-3 py-2 rounded-full"></i>
+                    <h6 class="mb-3 text-xl font-bold leading-5">Multiple language
+                    </h6>
+                    <p class="mb-3 text-sm text-gray-900">
+                        Our comes in with multiple
+                        languages
+                    </p>
+                </div>
+                <!--6-->
+                <div class=" sm:mx-auto sm:text-center  px-2">
+                    <div class="flex items-center justify-center mb-4 rounded-full ">
+                        <div class="flex">
+                            <i class="fa-brands fa-android sm:mx-auto px-3 py-2 rounded-full"></i>
+                            <i class="fa-brands fa-apple sm:mx-auto px-3 py-2 rounded-full"></i>
 
-                            </div>
                         </div>
-                        <h6 class="mb-3 text-xl font-bold leading-5">Shop Better
-
-                        </h6>
-                        <p class="mb-3 text-sm text-gray-900">
-                            Download our app from play store and app store 
-
-                        </p>
                     </div>
+                    <h6 class="mb-3 text-xl font-bold leading-5">Shop Better
+                    </h6>
+                    <p class="mb-3 text-sm text-gray-900">
+                        Download our app from play store and app store
+                    </p>
                 </div>
             </div>
-       
-            <div class="flex justify-between p-8 bg-[#09336F] text-white mx-10 my-8 rounded-xl">
-                <div>
-                    <p class="text-xl">Newsletter</p>
-                    <p>Be the first one to know about discounts, offers and events</p>
-                </div>
-                <div>
+        </div>
+
+        <div class="flex justify-between p-8 bg-[#09336F] text-white mx-10 my-8 rounded-xl">
+            <div>
+                <p class="text-xl">Newsletter</p>
+                <p>Be the first one to know about discounts, offers and events</p>
+            </div>
             <div class="mx-auto px-4  ">
-            <div class="mx-auto max-w-md">
-                <form class="">
-                <div class="relative max-w-lg">
-                    <label class="sr-only" for="email"> Email </label>
-        
-                    <input
-                    class=" w-full  rounded border-gray-200 bg-gray-100 p-4 pe-60 text-sm font-medium"
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    />
-        
-                    <button
-                    class="absolute end-1 top-1/2 -translate-y-1/2 rounded bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
-                    >
-                    Submit
-                    </button>
-                </div>
-                </form>
-            </div>
-            </div>
+                <div class="mx-auto max-w-md">
+                    <form class="">
+                        <div class="relative max-w-lg">
+                            <label class="sr-only" for="email"> Email </label>
+                            <input
+                                    class=" w-full  rounded border-gray-200 bg-gray-100 p-4 pe-60 text-sm font-medium"
+                                    id="email"
+                                    type="email"
+                                    placeholder="Enter your email"
+                            />
+                            <button
+                                    class="absolute end-1 top-1/2 -translate-y-1/2 rounded bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
+                            >
+                                Submit
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+</main>
 <!--Main Body-->
 
 <!-- Footer  -->
-    <footer class="bg-[#001021] text-xs md:text-md lg:text-lg">
-        <section class="bg-[url('/images/footer-bg.png')] bg-cover bg-center   text-white">
-            <!--Top Footer-->
-            <section class="flex justify-between lg:flex lg:justify-end lg:gap-60 bg-[#1B7FED]/30 lg:py-1 lg:px-10 px-3 text-center" >
-                <div class="flex gap-5 place-items-center">
-                    <i class="fa-brands fa-square-twitter" ></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
-
-                <div class="flex gap-2 lg:gap-5 place-items-center text-left py-2">
-                    <p><i class="fa-solid fa-phone-volume"></i></p>
-                    <div>
-                        <p>Hotline</p>
-                        <p class="text-sm">+90-327-5345543</p>
-                    </div>
-                </div>
-
-            </section>
-
-            <!--Main Footer-->
-            <section class="grid grid-cols-3 gap-5 lg:flex lg:gap-16 justify-center py-5 lg:py-10 pl-2">
-               <div class="grid  gap-2 lg:gap-4 pb-7 lg:pb-0 col-span-3 justify-items-center lg:justify-items-start justify-center">
+<footer class="bg-[#001021] text-xs md:text-md lg:text-lg">
+    <section class="bg-[url('/images/footer-bg.png')] bg-cover bg-center   text-white">
+        <!--Top Footer-->
+        <section
+                class="flex justify-between lg:flex lg:justify-end lg:gap-60 bg-[#1B7FED]/30 lg:py-1 lg:px-10 px-3 text-center">
+            <div class="flex gap-5 place-items-center">
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="flex gap-2 lg:gap-5 place-items-center text-left py-2">
+                <p><i class="fa-solid fa-phone-volume"></i></p>
                 <div>
-                    <img src="/images/6vally-logo-footer.png">
+                    <p>Hotline</p>
+                    <p class="text-sm">+90-327-5345543</p>
                 </div>
-                <div class="md:w-80 text-center md:text-left ">Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies </div>
-            
-                <div >
+            </div>
+        </section>
+
+        <!--Main Footer-->
+        <section class="grid grid-cols-3 gap-5 lg:flex lg:gap-16 justify-center py-5 lg:py-10 pl-2">
+            <div class="grid  gap-2 lg:gap-4 pb-7 lg:pb-0 col-span-3 justify-items-center lg:justify-items-start justify-center">
+                <div>
+                    <img src="/images/6valley-logo-footer.png" alt='footer'>
+                </div>
+                <div class="md:w-80 text-center md:text-left ">Suspendisse ultrices at diam lectus nullam. Nisl,
+                    sagittis viverra enim erat tortor ultricies
+                </div>
+                <div>
                     <p>1901 Thornridge Cir. Shiloh, Hawaii 81063 </p>
-                    <p></p>support@example.cpm</p>
+                    <p>support@example.cpm</p>
                 </div>
                 <div class="pt-2">
                     <button class="">
-                        <img src="/images/google-play.png" class="w-26 h-10">
+                        <img src="/images/google-play.png" class="w-26 h-10" alt='Google Play'>
                     </button>
                     <button>
-                        <img src="/images/app-store.png" class="w-26 h-10">
+                        <img src="/images/app-store.png" class="w-26 h-10" alt='App Store'>
                     </button>
                 </div>
-               </div>
-               <div class="flex flex-col gap-3 md:gap-0 lg:gap-4 justify-center">
+            </div>
+            <div class="flex flex-col gap-3 md:gap-0 lg:gap-4 justify-center">
                 <div class="font-bold	">Accounts</div>
                 <div>Become a Delivery Man</div>
                 <div>Open Your Store</div>
                 <div>Profile</div>
                 <div>Help & Support</div>
-               </div>
-               <div class="flex flex-col gap-3 md:gap-0 lg:gap-4 justify-center">
+            </div>
+            <div class="flex flex-col gap-3 md:gap-0 lg:gap-4 justify-center">
                 <div class="font-bold	">Quick Links</div>
                 <div>Flash Deals</div>
                 <div>Featured Products</div>
                 <div>Top Stores</div>
                 <div>New Arrivals</div>
-
-               </div>
-               <div class="flex flex-col gap-3 md:gap-0 lg:gap-4 justify-center">
+            </div>
+            <div class="flex flex-col gap-3 md:gap-0 lg:gap-4 justify-center">
                 <div class="font-bold	">Other</div>
                 <div>Privacy Policy</div>
                 <div>Term & Conditions</div>
                 <div>Refund Policy</div>
                 <div>Support Ticket</div>
-                
-
-               </div>
-
-            </section>
-
-            <!--Bottom Footer-->
-            <section>
-                <div class=" bg-[#1B7FED]/30 py-4 text-center">2021 COPYRIGHT All Rights Reserved By 6amMart.com</div>
-            </section>
-
+            </div>
         </section>
-   
-    </footer>
+        <!--Bottom Footer-->
+        <section>
+            <div class=" bg-[#1B7FED]/30 py-4 text-center">2021 COPYRIGHT All Rights Reserved By 6amMart.com</div>
+        </section>
+    </section>
+</footer>
 <!-- Footer -->
 
-    <script src="/scripts//scripts.js"></script>
-    
+<!-- Custom jQuery Scripts -->
+<script src="/scripts/scripts.js"></script>
 </body>
 </html>
