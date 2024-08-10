@@ -16,7 +16,7 @@
     <section id="promo-section">
         <div class="flex items-center bg-cover p-1" style="background-image: url('/images/ads-bg.png');">
             <i class="fa-solid fa-xmark text-[#005ABC] p-2" id="close-button"></i>
-            <div class="mx-auto text-center text-[#005ABC]">
+            <div class="mx-auto text-center text-[#005ABC] text-xs md:text-md ">
                 50% Off On Black Friday For All Stores - Valid Until 31 January, 2023
             </div>
         </div>
@@ -25,79 +25,70 @@
     <nav>
         <!-- Top Navbar -->
         <section>
-            <div class="flex justify-around bg-[#0D1D35] py-5 text-white">
-                <div>
-                    <div class="flex gap-10">
-                        <button class="bg-[#1B7FED] px-2 rounded-full">Become a Seller</button>
-                        <p>Free Express Shipping </p>
-                    </div>
-
+            <div class="flex flex-wrap justify-between items-center bg-[#0D1D35] py-3 px-4 sm:px-6 lg:px-8 text-white">
+                <div class="flex gap-5 sm:gap-10 justify-center sm:justify-start mb-4 sm:mb-0">
+                    <button class="bg-[#1B7FED] px-3 py-1 rounded-full text-sm sm:text-base">Become a Seller</button>
+                    <p class="text-sm sm:text-base">Free Express Shipping</p>
                 </div>
-                <div class="flex gap-10">
-                    <div class="flex gap-1 justify-items-center">
-                        <p>USD</p>
-                        <i class="fa-solid fa-angle-down pt-1"></i>
+                <div class="flex gap-5 sm:gap-10 justify-center sm:justify-end">
+                    <div class="flex gap-1 items-center">
+                        <p class="text-sm sm:text-base">USD</p>
+                        <i class="fa-solid fa-angle-down text-sm sm:text-base"></i>
                     </div>
-                    <div class="flex gap-1 justify-items-center">
-                        <p>EN</p>
-                        <i class="fa-solid fa-angle-down pt-1"></i>
+                    <div class="flex gap-1 items-center">
+                        <p class="text-sm sm:text-base">EN</p>
+                        <i class="fa-solid fa-angle-down text-sm sm:text-base"></i>
                     </div>
-                    <div class="flex gap-5 pt-1">
-                        <i class="fa-brands fa-square-twitter"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-instagram"></i>
+                    <div class="flex gap-3 sm:gap-5">
+                        <i class="fa-brands fa-square-twitter text-sm sm:text-base"></i>
+                        <i class="fa-brands fa-facebook text-sm sm:text-base"></i>
+                        <i class="fa-brands fa-instagram text-sm sm:text-base"></i>
                     </div>
                 </div>
             </div>
+            
 
-            <div class="flex justify-around py-4">
-                <div>
-                    <img src="/images/6valley-logo.png" alt='6valley logo'>
+            <div class=" md:flex flex-wrap justify-between items-center py-4 px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-center sm:justify-start">
+                    <img src="/images/6valley-logo.png" alt="6valley logo" class="h-8 sm:h-10">
                 </div>
-                <div class="flex items-center justify-center">
-                    <div class="flex border border-gray-300 rounded-full overflow-hidden">
-                        <div class="flex justify-between pl-10 px-4 text-gray-400">
+                <div class="flex flex-grow justify-center sm:justify-end sm:flex-grow-0 mt-4 sm:mt-0">
+                    <div class="flex border border-gray-300 rounded-full overflow-hidden w-full sm:w-auto">
+                        <div class="flex items-center text-gray-400 pl-4 pr-2">
                             <i class="fa-solid fa-bars p-3"></i>
                             <i class="fa-solid fa-angle-down p-3"></i>
                             <p class="h-5 border-x border-gray-300 my-auto"></p>
                         </div>
-                        <div style="position: relative; display: flex; align-items: center;">
-                            <label for="search"
-                                   style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Search
-                                for items or store...</label>
+                        <div class="relative flex items-center flex-grow">
+                            <label for="search" class="sr-only">Search for items or store...</label>
                             <input id="search" type="text" placeholder="Search for items or store..."
-                                   style="border: none; padding-right: 3rem; height: 2rem; box-sizing: border-box;"/>
+                                   class="border-none py-2 px-3 w-full focus:outline-none">
                         </div>
-                        <button class="bg-blue-500 text-white px-6 py-2">
+                        <button class="bg-blue-500 text-white px-4 sm:px-6 py-2">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
                 </div>
-                <div class="flex gap-5 text-gray-400">
-                    <i class="fa-solid fa-circle-user leading-[3rem] text-3xl rounded-full"></i>
-                    <p class="h-5 border-x  border-gray-300  my-auto"></p>
+                <div class="flex justify-center sm:justify-end gap-3 sm:gap-5 text-gray-400 mt-4 sm:mt-0">
+                    <i class="fa-solid fa-circle-user text-2xl sm:text-3xl"></i>
                     <div class="relative inline-block">
-                        <!-- Icon -->
-                        <i class="fa-solid fa-shuffle leading-[3rem] text-2xl"></i>
-                        <span class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-2/2 bg-[#1B7FED] text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">6</span>
+                        <i class="fa-solid fa-shuffle text-xl sm:text-2xl"></i>
+                        <span class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-[#1B7FED] text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">6</span>
                     </div>
-                    <p class="h-5 border-x  border-gray-300  my-auto"></p>
                     <div class="relative inline-block">
-                        <!-- Icon -->
-                        <i class="fa-regular fa-heart leading-[3rem] text-2xl"></i>
-                        <span class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-2/2 bg-[#1B7FED] text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">6</span>
+                        <i class="fa-regular fa-heart text-xl sm:text-2xl"></i>
+                        <span class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-[#1B7FED] text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">6</span>
                     </div>
-                    <p class="h-5 border-x  border-gray-300  my-auto"></p>
                     <div class="relative inline-block">
-                        <!-- Icon -->
-                        <i class="fa-solid fa-cart-shopping  leading-[3rem] text-2xl"></i>
-                        <span class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-2/2 bg-[#1B7FED] text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">6</span>
+                        <i class="fa-solid fa-cart-shopping text-xl sm:text-2xl"></i>
+                        <span class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-[#1B7FED] text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">6</span>
                     </div>
                 </div>
             </div>
+            
         </section>
         <!-- Main Navbar -->
-        <section class="grid grid-cols-4">
+        <section class=" lg:grid lg:grid-cols-4">
             <!-- Left -->
             <div class="pl-5">
                 <button class="text-white bg-blue-700 hover:bg-blue-800 font-medium text-sm w-full px-5 py-5 justify-around inline-flex gap-7 items-center"
@@ -245,20 +236,22 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-3 gap-2 p-5">
-                    <div class="grid grid-rows-2 gap-2 col-span-2">
-                        <img src="/images/header1.png" alt='header 1'>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2 p-2 md:p-5">
+                    <div class="grid grid-rows-2 gap-2 col-span-3 md:col-span-2">
+                        <img src="/images/header1.png" class="w-full h-auto" alt="header 1">
                         <div class="grid grid-cols-2 gap-2">
-                            <img src="/images/header2.png" class="h-[200px]" alt='header 2'>
-                            <img src="/images/header3.png" class="h-[200px]" alt='header 3'>
+                            <img src="/images/header2.png" class="w-full h-auto sm:h-[150px] md:h-[200px]" alt="header 2">
+                            <img src="/images/header3.png" class="w-full h-auto sm:h-[150px] md:h-[200px]" alt="header 3">
                         </div>
                     </div>
-                    <div class="bg-[url('/images/header4.png')] bg-cover bg-center h-110   text-white text-center py-10">
-                        <p class="font-bold text-3xl pb-5">New Launch</p>
-                        <p class="text-1xl">with new vision
-                        </p>
+
+                    <div class="bg-[url('/images/header4.png')] bg-cover bg-center h-[25rem] sm:h-[25rem] sm:w-[18rem] md:h-[28rem] md:w-[20rem]  lg:h-[39rem] lg:w-[25rem] text-white text-center py-10">
+                        <p class="font-bold text-2xl sm:text-3xl pb-3 sm:pb-5">New Launch</p>
+                        <p class="text-lg sm:text-xl">with new vision</p>
                     </div>
                 </div>
+                
+                
             </div>
 
         </section>
@@ -271,10 +264,10 @@
 <main>
     <!-- Recommended For You section -->
     <section class="p-10">
-        <p class="text-2xl font-semibold text-center">Recommended For You</p>
+        <p class="text-xl sm:text-2xl font-semibold text-center">Recommended For You</p>
 
         <div>
-            <ul class="flex justify-center gap-10 py-8 text-semibold ">
+            <ul class="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-10 py-4 sm:py-6 md:py-8 text-base sm:text-lg">
                 <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">Featured Products</li>
                 <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">Top Rated</li>
                 <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">Best Selling</li>
@@ -282,6 +275,7 @@
                 <li class="hover:text-[#1B7FED] hover:underline hover:underline-offset-8">New Arrivals</li>
             </ul>
         </div>
+        
 
         <div class="flex flex-col gap-5">
             <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-2">
@@ -1549,111 +1543,98 @@
     </section>
     <!--Features section-->
     <section class="bg-[#F2F3F4]">
-        <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:pt-10 ">
-            <div class="grid gap-4 lg:grid-cols-6 ">
-                <!--1-->
-                <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-4">
-                    <div class="flex items-center justify-center mb-4 rounded-full ">
-                        <i class="fa-solid fa-dollar-sign border border-gray-500 sm:mx-auto px-3 py-2 rounded-full"></i>
+        <div class="px-4 pt-10 mx-auto max-w-full lg:max-w-screen-xl">
+            <div class="grid gap-4 lg:grid-cols-6 sm:grid-cols-2 grid-cols-1">
+                <!-- 1 -->
+                <div class="text-center border-b lg:border-b-0 lg:border-r border-gray-300 px-4 py-4 lg:py-0">
+                    <div class="flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-dollar-sign border border-gray-500 px-3 py-2 rounded-full"></i>
                     </div>
-                    <h6 class="mb-3 text-xl font-bold leading-5">Great Value
-                    </h6>
+                    <h6 class="mb-3 text-lg sm:text-xl font-bold leading-5">Great Value</h6>
                     <p class="mb-3 text-sm text-gray-900">
-                        We offer competitive prices
-                        on over 100 million items
+                        We offer competitive prices on over 100 million items.
                     </p>
                 </div>
-                <!--2-->
-                <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-2">
-                    <div class="flex items-center justify-center mb-4 rounded-full ">
-                        <i class="fa-solid fa-truck-fast sm:mx-auto px-3 py-2 rounded-full"></i>
+                <!-- 2 -->
+                <div class="text-center border-b lg:border-b-0 lg:border-r border-gray-300 px-4 py-4 lg:py-0">
+                    <div class="flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-truck-fast px-3 py-2 rounded-full"></i>
                     </div>
-                    <h6 class="mb-3 text-xl font-bold leading-5">Whole Country Shipping
-                    </h6>
+                    <h6 class="mb-3 text-lg sm:text-xl font-bold leading-5">Whole Country Shipping</h6>
                     <p class="mb-3 text-sm text-gray-900">
-                        We ship all over the country at any time, anywhere
+                        We ship all over the country at any time, anywhere.
                     </p>
                 </div>
-                <!--3-->
-                <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-2">
-                    <div class="flex items-center justify-center mb-4 rounded-full ">
-                        <i class="fa-solid fa-credit-card sm:mx-auto px-3 py-2 rounded-full"></i>
+                <!-- 3 -->
+                <div class="text-center border-b lg:border-b-0 lg:border-r border-gray-300 px-4 py-4 lg:py-0">
+                    <div class="flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-credit-card px-3 py-2 rounded-full"></i>
                     </div>
-                    <h6 class="mb-3 text-xl font-bold leading-5">Safe Payment
-                    </h6>
+                    <h6 class="mb-3 text-lg sm:text-xl font-bold leading-5">Safe Payment</h6>
                     <p class="mb-3 text-sm text-gray-900">
                         Pay with secure payment methods.
                     </p>
                 </div>
-                <!--4-->
-                <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-2">
-                    <div class="flex items-center justify-center mb-4 rounded-full ">
-                        <i class="fa-solid fa-headset sm:mx-auto px-3 py-2 rounded-full"></i>
+                <!-- 4 -->
+                <div class="text-center border-b lg:border-b-0 lg:border-r border-gray-300 px-4 py-4 lg:py-0">
+                    <div class="flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-headset px-3 py-2 rounded-full"></i>
                     </div>
-                    <h6 class="mb-3 text-xl font-bold leading-5">24/7 Support
-                    </h6>
+                    <h6 class="mb-3 text-lg sm:text-xl font-bold leading-5">24/7 Support</h6>
                     <p class="mb-3 text-sm text-gray-900">
-                        Pay with secure payment
-                        methods.
+                        Pay with secure payment methods.
                     </p>
                 </div>
-                <!--5-->
-                <div class=" sm:mx-auto sm:text-center border-r  border-gray-600 px-2">
-                    <div class="flex items-center justify-center mb-4 rounded-full ">
-                        <i class="fa-solid fa-globe sm:mx-auto px-3 py-2 rounded-full"></i>
+                <!-- 5 -->
+                <div class="text-center border-b lg:border-b-0 lg:border-r border-gray-300 px-4 py-4 lg:py-0">
+                    <div class="flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-globe px-3 py-2 rounded-full"></i>
                     </div>
-                    <h6 class="mb-3 text-xl font-bold leading-5">Multiple language
-                    </h6>
+                    <h6 class="mb-3 text-lg sm:text-xl font-bold leading-5">Multiple Languages</h6>
                     <p class="mb-3 text-sm text-gray-900">
-                        Our comes in with multiple
-                        languages
+                        Our site supports multiple languages.
                     </p>
                 </div>
-                <!--6-->
-                <div class=" sm:mx-auto sm:text-center  px-2">
-                    <div class="flex items-center justify-center mb-4 rounded-full ">
-                        <div class="flex">
-                            <i class="fa-brands fa-android sm:mx-auto px-3 py-2 rounded-full"></i>
-                            <i class="fa-brands fa-apple sm:mx-auto px-3 py-2 rounded-full"></i>
-
-                        </div>
+                <!-- 6 -->
+                <div class="text-center px-4 py-4 lg:py-0">
+                    <div class="flex items-center justify-center mb-4 space-x-2">
+                        <i class="fa-brands fa-android px-3 py-2 rounded-full"></i>
+                        <i class="fa-brands fa-apple px-3 py-2 rounded-full"></i>
                     </div>
-                    <h6 class="mb-3 text-xl font-bold leading-5">Shop Better
-                    </h6>
+                    <h6 class="mb-3 text-lg sm:text-xl font-bold leading-5">Shop Better</h6>
                     <p class="mb-3 text-sm text-gray-900">
-                        Download our app from play store and app store
+                        Download our app from the Play Store and App Store.
                     </p>
                 </div>
             </div>
         </div>
-
-        <div class="flex justify-between p-8 bg-[#09336F] text-white mx-10 my-8 rounded-xl">
-            <div>
-                <p class="text-xl">Newsletter</p>
-                <p>Be the first one to know about discounts, offers and events</p>
+    
+        <div class="flex flex-col lg:flex-row justify-between items-center p-8 bg-[#09336F] text-white mx-4 lg:mx-10 my-8 rounded-xl">
+            <div class="mb-6 lg:mb-0 text-center lg:text-left">
+                <p class="text-lg lg:text-xl font-semibold">Newsletter</p>
+                <p>Be the first one to know about discounts, offers, and events.</p>
             </div>
-            <div class="mx-auto px-4  ">
-                <div class="mx-auto max-w-md">
-                    <form class="">
-                        <div class="relative max-w-lg">
-                            <label class="sr-only" for="email"> Email </label>
-                            <input
-                                    class=" w-full  rounded border-gray-200 bg-gray-100 p-4 pe-60 text-sm font-medium"
-                                    id="email"
-                                    type="email"
-                                    placeholder="Enter your email"
-                            />
-                            <button
-                                    class="absolute end-1 top-1/2 -translate-y-1/2 rounded bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
-                            >
-                                Submit
-                            </button>
-                        </div>
-                    </form>
-                </div>
+            <div class="w-full lg:w-auto">
+                <form class="flex items-center">
+                    <div class="relative w-full lg:w-[300px]">
+                        <label class="sr-only" for="email"> Email </label>
+                        <input
+                            class="w-full rounded border-gray-200 bg-gray-100 p-4 text-sm font-medium"
+                            id="email"
+                            type="email"
+                            placeholder="Enter your email"
+                        />
+                        <button
+                            class="absolute right-1 top-1/2 -translate-y-1/2 rounded bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
+                        >
+                            Submit
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
+    
 </main>
 <!--Main Body-->
 
